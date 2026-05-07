@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power BI Service | T3 Quiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&family=Outfit:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <span class="badge">Session T3</span>
+                <h1>Power BI Service</h1>
+                <p>แบบทดสอบความรู้ Power BI Service</p>
+                <div class="course-info">หลักสูตร: ชลบุรี (10-13 มีนาคม)</div>
+            </div>
+        </header>
+
+        <form id="t3Form">
+            <!-- ส่วนที่ 1: ข้อมูลส่วนตัว -->
+            <div class="form-section fade-in">
+                <h2><span class="step-num">1</span> ข้อมูลส่วนตัว</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name">ชื่อ-นามสกุล</label>
+                        <input type="text" id="name" name="name" placeholder="ระบุชื่อ-นามสกุล" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">อีเมล</label>
+                        <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">เบอร์โทรศัพท์</label>
+                        <input type="tel" id="phone" name="phone" placeholder="0XXXXXXXXX" pattern="[0-9]{9,10}"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="job">ตำแหน่งงานปัจจุบัน</label>
+                        <input type="text" id="job" name="job" placeholder="ระบุตำแหน่งงาน" required>
+                    </div>
+                </div>
+                <!-- NEW: Portfolio Link -->
+                <div class="form-group" style="margin-top: 20px;">
+                    <label for="portfolioLink">ลิงก์ผลงาน Power BI (Publish to Web)</label>
+                    <input type="url" id="portfolioLink" name="portfolioLink"
+                        placeholder="https://app.powerbi.com/view?r=..." required>
+                    <small style="color: #666; display: block; margin-top: 5px;">*
+                        กรุณาใส่ลิงก์ผลงานที่เผยแพร่แบบสาธารณะ</small>
+                </div>
+            </div>
+
+            <!-- ส่วนที่ 2: แบบทดสอบ -->
+            <div class="form-section quiz-section fade-in">
+                <h2><span class="step-num">2</span> แบบทดสอบความรู้ Power BI Service (10 ข้อ)</h2>
+
+                <div class="quiz-item">
+                    <p class="question">1. ถ้าเราสร้างรายงานเสร็จในโปรแกรม Power BI Desktop แล้ว
+                        อยากให้หัวหน้าดูผ่านมือถือได้ เราต้องทำอย่างไร?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q1" value="ก" required> ก. ส่งไฟล์ .pbix ทางอีเมล</label>
+                        <label><input type="radio" name="q1" value="ข"> ข. กดปุ่ม Publish เพื่อเอาขึ้น Power BI
+                            Service</label>
+                        <label><input type="radio" name="q1" value="ค"> ค. เซฟไฟล์ใส่ Flash Drive
+                            ไปเสียบคอมพิวเตอร์หัวหน้า</label>
+                        <label><input type="radio" name="q1" value="ง"> ง. ถ่ายรูปหน้าจอส่ง Line</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">2. "Workspace" ใน Power BI Service เปรียบเสมือนสิ่งใดในการทำงาน?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q2" value="ก" required> ก.
+                            ถังขยะสำหรับลบไฟล์ที่ไม่ใช้แล้ว</label>
+                        <label><input type="radio" name="q2" value="ข"> ข. ห้องทำงานส่วนตัวหรือห้องทำงานกลุ่ม
+                            เพื่อใช้จัดเก็บและจัดการรายงานร่วมกับทีม</label>
+                        <label><input type="radio" name="q2" value="ค"> ค. โปรแกรมสำหรับพิมพ์เอกสารรายงาน</label>
+                        <label><input type="radio" name="q2" value="ง"> ง. หน้าจอสำหรับเล่นเกมเพื่อผ่อนคลาย</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">3. หากต้องการให้ข้อมูลในรายงาน "อัปเดตเองทุกเช้า" โดยที่เราไม่ต้องกดปุ่ม Refresh
+                        เอง ต้องไปตั้งค่าที่ไหน?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q3" value="ก" required> ก. ในโปรแกรม Excel ต้นทาง</label>
+                        <label><input type="radio" name="q3" value="ข"> ข. ตั้งค่า Scheduled Refresh ใน Power BI
+                            Service</label>
+                        <label><input type="radio" name="q3" value="ค"> ค. ปิดคอมพิวเตอร์แล้วเปิดใหม่</label>
+                        <label><input type="radio" name="q3" value="ง"> ง. ลบรายงานแล้วลงใหม่ทุกเช้า</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">4. "My Workspace" มีไว้สำหรับใช้งานแบบใด?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q4" value="ก" required> ก. ใช้ทำงานร่วมกับคนทั้งบริษัท</label>
+                        <label><input type="radio" name="q4" value="ข"> ข.
+                            เป็นพื้นที่ส่วนตัวสำหรับทดลองสร้างรายงานคนเดียว</label>
+                        <label><input type="radio" name="q4" value="ค"> ค. ใช้สำหรับเก็บรูปภาพส่วนตัว</label>
+                        <label><input type="radio" name="q4" value="ง"> ง. เป็นที่สำหรับแก้สูตร Excel</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">5. เมื่อเราแชร์รายงานให้เพื่อนร่วมงานผ่าน "App" เพื่อนจะสามารถทำอะไรได้บ้าง?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q5" value="ก" required> ก. ลบกราฟของเราทิ้งได้เลย</label>
+                        <label><input type="radio" name="q5" value="ข"> ข. เข้าไปแก้สูตร DAX ของเราได้</label>
+                        <label><input type="radio" name="q5" value="ค"> ค. ดูข้อมูลและฟิลเตอร์รายงานได้อย่างเดียว
+                            (Read-only)</label>
+                        <label><input type="radio" name="q5" value="ง"> ง. เปลี่ยนสีพื้นหลังของรายงานเราได้</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">6. อุปกรณ์ใดบ้างที่สามารถเปิดดูรายงานจาก Power BI Service ได้?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q6" value="ก" required> ก. คอมพิวเตอร์โน้ตบุ๊ก</label>
+                        <label><input type="radio" name="q6" value="ข"> ข. สมาร์ทโฟน (ผ่าน App Power BI)</label>
+                        <label><input type="radio" name="q6" value="ค"> ค. แท็บเล็ต หรือ iPad</label>
+                        <label><input type="radio" name="q6" value="ง"> ง. ถูกทุกข้อ</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">7. ข้อใดคือประโยชน์หลักของการใช้ Power BI Service (Cloud)?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q7" value="ก" required> ก.
+                            ช่วยให้พิมพ์เอกสารได้เร็วขึ้น</label>
+                        <label><input type="radio" name="q7" value="ข"> ข.
+                            ช่วยให้ทีมเข้าถึงรายงานเดียวกันได้จากทุกที่ที่มีอินเทอร์เน็ต</label>
+                        <label><input type="radio" name="q7" value="ค"> ค.
+                            ช่วยซ่อมแซมไฟล์ที่เสียให้กลับมาใช้งานได้</label>
+                        <label><input type="radio" name="q7" value="ง"> ง. ช่วยให้คอมพิวเตอร์ทำงานเร็วขึ้น</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">8. เมื่อต้องการนำรายงานไปเผยแพร่ให้ผู้อื่นดูผ่าน "Link" (เช่น Publish to Web)
+                        ข้อใดคือสิ่งที่ต้องระวังมากที่สุด?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q8" value="ก" required> ก. ลิงก์อาจจะหมดอายุภายใน 1
+                            ชั่วโมง</label>
+                        <label><input type="radio" name="q8" value="ข"> ข. ข้อมูลในรายงานจะกลายเป็นสาธารณะ
+                            ใครที่มีลิงก์จะเห็นข้อมูลได้ทั้งหมด (ไม่ควรใช้กับข้อมูลลับ)</label>
+                        <label><input type="radio" name="q8" value="ค"> ค.
+                            ลิงก์จะทำให้คอมพิวเตอร์ของผู้ดูติดไวรัส</label>
+                        <label><input type="radio" name="q8" value="ง"> ง.
+                            สีของกราฟจะเปลี่ยนเป็นขาวดำโดยอัตโนมัติ</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">9. การเข้าไปตั้งค่า (Settings) ใน Power BI Service
+                        ส่วนใหญ่ทำเพื่อวัตถุประสงค์ใด?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q9" value="ก" required> ก.
+                            เพื่อเปลี่ยนรูปโปรไฟล์ของผู้ใช้งานเท่านั้น</label>
+                        <label><input type="radio" name="q9" value="ข"> ข. เพื่อตั้งค่าการเชื่อมต่อข้อมูล (Gateway),
+                            จัดการสิทธิ์ผู้ใช้งาน และตั้งเวลารีเฟรชข้อมูล</label>
+                        <label><input type="radio" name="q9" value="ค"> ค. เพื่อเขียนโค้ดสร้างเว็บไซต์ใหม่ขึ้นมา</label>
+                        <label><input type="radio" name="q9" value="ง"> ง. เพื่อสมัครใช้อีเมลใหม่</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">10. ใครคือผู้ที่ควรใช้งาน Power BI Service?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q10" value="ก" required> ก.
+                            ผู้บริหารที่ต้องการดูสรุปยอดขาย</label>
+                        <label><input type="radio" name="q10" value="ข"> ข.
+                            พนักงานวิเคราะห์ข้อมูลที่ต้องการแชร์งานให้ทีม</label>
+                        <label><input type="radio" name="q10" value="ค"> ค. เจ้าของธุรกิจที่ต้องการติดตามผลงานแบบ
+                            Real-time</label>
+                        <label><input type="radio" name="q10" value="ง"> ง. ถูกทุกข้อ</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" id="submitBtn">ส่งคำตอบแบบทดสอบ T3</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="success-icon">✓</div>
+            <h2>ส่งข้อมูลสำเร็จ! 🎉</h2>
+            <p class="score-text">คะแนนที่คุณได้คือ <span id="finalScore">0</span> / 10</p>
+            <div class="course-details-popup">
+                <p><strong>ชื่อแบบทดสอบ:</strong> แบบทดสอบความรู้ Power BI Service (T3)</p>
+                <p><strong>วันที่:</strong> 10-13 มีนาคม 2569</p>
+                <p><strong>สถานที่:</strong> ณ สถาบันพัฒนาฝีมือแรงงาน 3 ชลบุรี</p>
+            </div>
+            <p class="modal-msg">***ขอขอบคุณที่ร่วมสนุกและตั้งใจเรียนรู้ครับ***</p>
+            <button onclick="closeModal()">ตกลง</button>
+        </div>
+    </div>
+
+    <script src="t3-script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power BI Foundation | T4 Quiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&family=Outfit:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <span class="badge">Session T4</span>
+                <h1>Power BI Foundation</h1>
+                <p>แบบทดสอบความรู้พื้นฐาน Power BI (25 ข้อ)</p>
+                <div class="course-info">หลักสูตร: ชลบุรี (10-13 มีนาคม)</div>
+            </div>
+        </header>
+
+        <form id="t4Form">
+            <!-- ส่วนที่ 1: ข้อมูลส่วนตัว -->
+            <div class="form-section fade-in">
+                <h2><span class="step-num">1</span> ข้อมูลส่วนตัว</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name">ชื่อ-นามสกุล</label>
+                        <input type="text" id="name" name="name" placeholder="ระบุชื่อ-นามสกุล" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">อีเมล</label>
+                        <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">เบอร์โทรศัพท์</label>
+                        <input type="tel" id="phone" name="phone" placeholder="0XXXXXXXXX" pattern="[0-9]{9,10}"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="job">ตำแหน่งงานปัจจุบัน</label>
+                        <input type="text" id="job" name="job" placeholder="ระบุตำแหน่งงาน" required>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ส่วนที่ 2: แบบทดสอบ -->
+            <div class="form-section quiz-section fade-in">
+                <h2><span class="step-num">2</span> แบบทดสอบความรู้พื้นฐาน (25 ข้อ)</h2>
+
+                <!-- หมวดที่ 1 -->
+                <h3 class="category-title">หมวดที่ 1: ความรู้ทั่วไปและเครื่องมือ</h3>
+                <div class="quiz-item">
+                    <p class="question">1. Power BI คือเครื่องมือที่ใช้ทำอะไรเป็นหลัก?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q1" value="ก" required> ก. พิมพ์เอกสารสัญญา</label>
+                        <label><input type="radio" name="q1" value="ข"> ข. ตัดต่อวิดีโอ</label>
+                        <label><input type="radio" name="q1" value="ค"> ค. วิเคราะห์ข้อมูลและสร้างรายงานในรูปแบบกราฟ
+                            (Business Intelligence)</label>
+                        <label><input type="radio" name="q1" value="ง"> ง. ออกแบบโลโก้บริษัท</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">2. โปรแกรมใดใช้สำหรับ "สร้างและออกแบบ" รายงานบนเครื่องคอมพิวเตอร์?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q2" value="ก" required> ก. Power BI Service</label>
+                        <label><input type="radio" name="q2" value="ข"> ข. Power BI Desktop</label>
+                        <label><input type="radio" name="q2" value="ค"> ค. Power BI Mobile</label>
+                        <label><input type="radio" name="q2" value="ง"> ง. Power BI Gateway</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">3. ขั้นตอนแรกสุดของการทำรายงานใน Power BI คืออะไร?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q3" value="ก" required> ก. การเลือกสีกราฟ</label>
+                        <label><input type="radio" name="q3" value="ข"> ข. การ Get Data (นำเข้าข้อมูล)</label>
+                        <label><input type="radio" name="q3" value="ค"> ค. การแชร์ลิงก์ให้หัวหน้า</label>
+                        <label><input type="radio" name="q3" value="ง"> ง. การตั้งชื่อไฟล์</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">4. Power BI สามารถดึงข้อมูลจากแหล่งใดได้บ้าง?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q4" value="ก" required> ก. Excel</label>
+                        <label><input type="radio" name="q4" value="ข"> ข. SQL Server</label>
+                        <label><input type="radio" name="q4" value="ค"> ค. Facebook Ads / Google Analytics</label>
+                        <label><input type="radio" name="q4" value="ง"> ง. ถูกทุกข้อ</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">5. นามสกุลไฟล์ของ Power BI Desktop คืออะไร?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q5" value="ก" required> ก. .xlsx</label>
+                        <label><input type="radio" name="q5" value="ข"> ข. .docx</label>
+                        <label><input type="radio" name="q5" value="ค"> ค. .pbix</label>
+                        <label><input type="radio" name="q5" value="ง"> ง. .pdf</label>
+                    </div>
+                </div>
+
+                <!-- หมวดที่ 2 -->
+                <h3 class="category-title">หมวดที่ 2: การจัดการข้อมูล (Power DAX & Data Model)</h3>
+                <div class="quiz-item">
+                    <p class="question">6. ภาษา DAX (Data Analysis Expressions)
+                        มีลักษณะการเขียนสูตรคล้ายกับโปรแกรมใดมากที่สุด?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q6" value="ก" required> ก. Photoshop</label>
+                        <label><input type="radio" name="q6" value="ข"> ข. Microsoft Excel</label>
+                        <label><input type="radio" name="q6" value="ค"> ค. AutoCAD</label>
+                        <label><input type="radio" name="q6" value="ง"> ง. Premiere Pro</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">7. "Calculated Column" กับ "Measure" แตกต่างกันอย่างไรในระดับพื้นฐาน?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q7" value="ก" required> ก. Calculated Column
+                            คำนวณทีละแถวและเก็บค่าไว้ในตาราง ส่วน Measure คำนวณเมื่อมีการนำไปวางในกราฟ</label>
+                        <label><input type="radio" name="q7" value="ข"> ข. Measure ใช้พื้นที่เก็บข้อมูลมากกว่า
+                            Calculated Column</label>
+                        <label><input type="radio" name="q7" value="ค"> ค. Calculated Column ใช้เขียนสูตรไม่ได้</label>
+                        <label><input type="radio" name="q7" value="ง"> ง. ไม่มีเนื้อหาที่แตกต่างกัน
+                            ใช้งานเหมือนกัน</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">8. ฟังก์ชัน DAX พื้นฐานตัวใดที่ใช้สำหรับ "รวมค่าตัวเลข" ในคอลัมน์ที่ต้องการ?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q8" value="ก" required> ก. COUNT</label>
+                        <label><input type="radio" name="q8" value="ข"> ข. AVERAGE</label>
+                        <label><input type="radio" name="q8" value="ค"> ค. SUM</label>
+                        <label><input type="radio" name="q8" value="ง"> ง. MAX</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">9. หากต้องการเขียนสูตรที่มีเงื่อนไข เช่น "ถ้าขายได้มากกว่า 100 ให้แสดงคำว่า
+                        Pass" ต้องใช้ฟังก์ชันใด? </p>
+                    <div class="options">
+                        <label><input type="radio" name="q9" value="ก" required> ก. CALCULATION</label>
+                        <label><input type="radio" name="q9" value="ข"> ข. IF</label>
+                        <label><input type="radio" name="q9" value="ค"> ค. TOTAL</label>
+                        <label><input type="radio" name="q9" value="ง"> ง. FILTER</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">10. ในการทำ Data Model เส้นที่ลากเชื่อมระหว่าง 2 ตาราง (Relationship)
+                        มีความสำคัญอย่างไร?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q10" value="ก" required> ก.
+                            เพื่อให้ตารางดูสวยงามเป็นระเบียบ</label>
+                        <label><input type="radio" name="q10" value="ข"> ข. เพื่อให้ข้อมูลจากตารางหนึ่งสามารถไป
+                            "ฟิลเตอร์" หรือส่งค่าไปยังอีกตารางหนึ่งได้</label>
+                        <label><input type="radio" name="q10" value="ค"> ค. เพื่อใช้แทนการเขียนสูตร DAX ทั้งหมด</label>
+                        <label><input type="radio" name="q10" value="ง"> ง. เพื่อป้องกันไม่ให้คนอื่นมาแก้ไขไฟล์</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">11. ฟังก์ชัน CALCULATE ใน DAX มีหน้าที่หลักคืออะไร?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q11" value="ก" required> ก.
+                            ใช้สำหรับบวกเลขพื้นฐานเท่านั้น</label>
+                        <label><input type="radio" name="q11" value="ข"> ข. ใช้เปลี่ยนบริบท (Context) ของการคำนวณ เช่น
+                            การคำนวณยอดขาย "เฉพาะปี 2023"</label>
+                        <label><input type="radio" name="q11" value="ค"> ค. ใช้สำหรับลบตารางทิ้ง</label>
+                        <label><input type="radio" name="q11" value="ง"> ง. ใช้ตั้งชื่อไฟล์ใหม่</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">12. "Star Schema" ในการจัดวาง Data Model คืออะไร?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q12" value="ก" required> ก. การวางตารางเป็นรูปวงกลม</label>
+                        <label><input type="radio" name="q12" value="ข"> ข. การวางตาราง Fact (ข้อมูลหลัก) ไว้ตรงกลาง
+                            และล้อมรอบด้วยตาราง Dimension (ข้อมูลย่อย/หมวดหมู่)</label>
+                        <label><input type="radio" name="q12" value="ค"> ค. การติดดาวให้กับตารางที่สำคัญที่สุด</label>
+                        <label><input type="radio" name="q12" value="ง"> ง. การใช้รูปดาวแทนกราฟแท่ง</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">13. หากคุณต้องการสร้าง "ปฏิทิน" หรือตารางวันที่ใน Power BI โดยใช้สูตร DAX
+                        ควรเริ่มด้วยฟังก์ชันใด?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q13" value="ก" required> ก. CALENDAR หรือ CALENDARAUTO</label>
+                        <label><input type="radio" name="q13" value="ข"> ข. TODAY</label>
+                        <label><input type="radio" name="q13" value="ค"> ค. NOW</label>
+                        <label><input type="radio" name="q13" value="ง"> ง. DATEVALUE</label>
+                    </div>
+                </div>
+
+                <!-- หมวดที่ 3 -->
+                <h3 class="category-title">หมวดที่ 3: การสร้างกราฟและการนำเสนอ (Visualization)</h3>
+                <div class="quiz-item">
+                    <p class="question">14. ถ้าต้องการเปรียบเทียบยอดขาย "รายเดือน" เพื่อดูแนวโน้ม (Trend)
+                        กราฟชนิดใดเหมาะสมที่สุด?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q14" value="ก" required> ก. Pie Chart (กราฟวงกลม)</label>
+                        <label><input type="radio" name="q14" value="ข"> ข. Line Chart หรือ Column Chart
+                            (กราฟเส้นหรือกราฟแท่ง)</label>
+                        <label><input type="radio" name="q14" value="ค"> ค. Map (แผนที่)</label>
+                        <label><input type="radio" name="q14" value="ง"> ง. Card (บัตรตัวเลข)</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">15. "Slicer" ใน Power BI มีไว้เพื่อวัตถุประสงค์ใด?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q15" value="ก" required> ก. ใช้สำหรับตัดแบ่งไฟล์</label>
+                        <label><input type="radio" name="q15" value="ข"> ข. ใช้เป็นตัวกรอง (Filter)
+                            ให้ผู้ใช้งานกดเลือกดูข้อมูลตามที่ต้องการ เช่น เลือกปี หรือ เลือกสาขา</label>
+                        <label><input type="radio" name="q15" value="ค"> ค. ใช้สำหรับตกแต่งขอบรายงาน</label>
+                        <label><input type="radio" name="q15" value="ง"> ง. ใช้เพิ่มความเร็วอินเทอร์เน็ต</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">16. หากต้องการดู "ตัวเลขยอดขายรวม" หรือ "ยอดเป้าหมาย" ตัวใหญ่ๆ
+                        ชัดเจนเพียงตัวเดียว ควรใช้ Visual ชนิดใด?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q16" value="ก" required> ก. Table</label>
+                        <label><input type="radio" name="q16" value="ข"> ข. Card</label>
+                        <label><input type="radio" name="q16" value="ค"> ค. Scatter Chart</label>
+                        <label><input type="radio" name="q16" value="ง"> ง. Treemap</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">17. การเปลี่ยนสีสัน ขนาดตัวอักษร หรือการตกแต่งกราฟ ต้องไปที่เมนูใดในแถบ
+                        Visualizations?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q17" value="ก" required> ก. Build Visual</label>
+                        <label><input type="radio" name="q17" value="ข"> ข. Format (ไอคอนแปรงทาสี)</label>
+                        <label><input type="radio" name="q17" value="ค"> ค. Analytics</label>
+                        <label><input type="radio" name="q17" value="ง"> ง. Data View</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">18. "Tooltip" คืออะไร?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q18" value="ก" required> ก. เมนูช่วยเหลือ</label>
+                        <label><input type="radio" name="q18" value="ข"> ข.
+                            กล่องข้อความที่แสดงรายละเอียดเพิ่มเติมเมื่อเราเอาเมาส์ไปชี้ที่จุดข้อมูลบนกราฟ</label>
+                        <label><input type="radio" name="q18" value="ค"> ค. เครื่องมือสำหรับวาดรูป</label>
+                        <label><input type="radio" name="q18" value="ง"> ง. ปุ่มสำหรับกดบันทึกงาน</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">19. ใน Power BI Service ฟีเจอร์ "Dashboard" ต่างจาก "Report" อย่างไร?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q19" value="ก" required> ก. Dashboard มีได้หลายหน้า แต่ Report
+                            มีหน้าเดียว</label>
+                        <label><input type="radio" name="q19" value="ข"> ข. Dashboard คือหน้าสรุปผลที่รวม Visual
+                            สำคัญจากหลายๆ Report มาไว้ในหน้าเดียว</label>
+                        <label><input type="radio" name="q19" value="ค"> ค. Dashboard ใช้สำหรับลบข้อมูลทิ้ง</label>
+                        <label><input type="radio" name="q19" value="ง"> ง. Report
+                            ใช้งานได้เฉพาะบนมือถือเท่านั้น</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">20. การนำรายงานไปเผยแพร่ผ่านลิงก์สาธารณะ (Publish to Web) มีข้อควรระวังอย่างไร?
+                    </p>
+                    <div class="options">
+                        <label><input type="radio" name="q20" value="ก" required> ก. ลิงก์จะหมดอายุใน 24 ชั่วโมง</label>
+                        <label><input type="radio" name="q20" value="ข"> ข. ข้อมูลจะกลายเป็นสาธารณะ
+                            ใครที่มีลิงก์จะสามารถเข้าถึงข้อมูลได้ทั้งหมด</label>
+                        <label><input type="radio" name="q20" value="ค"> ค. กราฟจะเปลี่ยนเป็นสีขาวดำ</label>
+                        <label><input type="radio" name="q20" value="ง"> ง. ไม่สามารถดูผ่านมือถือได้</label>
+                    </div>
+                </div>
+
+                <!-- หมวดที่ 4 -->
+                <h3 class="category-title">หมวดที่ 4: แนวทางการวางแผนการทำรายงาน (Planning & Workflow)</h3>
+                <div class="quiz-item">
+                    <p class="question">21. ก่อนที่จะเริ่มเปิดโปรแกรมเพื่อทำรายงาน ขั้นตอนแรกที่สำคัญที่สุดคืออะไร?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q21" value="ก" required> ก. การเลือกโทนสีของรายงาน</label>
+                        <label><input type="radio" name="q21" value="ข"> ข. การทำความเข้าใจความต้องการของผู้ใช้
+                            (Requirement) และกำหนดตัวชี้วัด (KPI)</label>
+                        <label><input type="radio" name="q21" value="ค"> ค. การติดตั้ง Font ใหม่ลงในเครื่อง</label>
+                        <label><input type="radio" name="q21" value="ง"> ง. การซื้อ License Pro</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">22. การวางแผนแบบ "Star Schema" มีประโยชน์สูงสุดในด้านใด?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q22" value="ก" required> ก. ช่วยให้รายงานประมวลผลได้รวดเร็ว
+                            (Performance) และเขียนสูตร DAX ได้ง่ายขึ้น</label>
+                        <label><input type="radio" name="q22" value="ข"> ข. ช่วยให้รายงานมีสีสันเหมือนดวงดาว</label>
+                        <label><input type="radio" name="q22" value="ค"> ค. ช่วยให้ประหยัดพื้นที่ใน Hard Drive</label>
+                        <label><input type="radio" name="q22" value="ง"> ง.
+                            ช่วยให้พิมพ์รายงานออกมาทางกระดาษได้ชัดเจน</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">23. หลักการออกแบบ Layout รายงานที่ดีเพื่อให้ผู้บริหารดูข้อมูลได้ง่ายคือข้อใด?
+                    </p>
+                    <div class="options">
+                        <label><input type="radio" name="q23" value="ก" required> ก.
+                            ใส่ข้อมูลทุกอย่างที่มีลงไปในหน้าเดียวให้แน่นที่สุด</label>
+                        <label><input type="radio" name="q23" value="ข"> ข. วาง Visual ที่สำคัญที่สุดไว้ด้านบนซ้าย
+                            (ตามทิศทางการอ่าน) และเน้นความเรียบง่าย</label>
+                        <label><input type="radio" name="q23" value="ค"> ค.
+                            ใช้สีสันให้หลากหลายที่สุดเพื่อความสวยงาม</label>
+                        <label><input type="radio" name="q23" value="ง"> ง. ใช้กราฟวงกลมเพียงอย่างเดียว</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">24. ขั้นตอน "UAT (User Acceptance Test)" คืออะไร?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q24" value="ก" required> ก. การเขียนสูตรคำนวณแบบซับซ้อน</label>
+                        <label><input type="radio" name="q24" value="ข"> ข.
+                            ให้ผู้ใช้ตรวจสอบความถูกต้องของรายงานก่อนนำไปใช้งานจริง</label>
+                        <label><input type="radio" name="q24" value="ค"> ค. การอัปโหลดไฟล์ขึ้น GitHub</label>
+                        <label><input type="radio" name="q24" value="ง"> ง. การปิดโปรแกรมเพื่อพักผ่อน</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">25. การวางแผน (Planning) ในการทำรายงาน Power BI มีความสำคัญอย่างไรมากที่สุด?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q25" value="ก" required> ก.
+                            ช่วยให้เราเลือกซื้อคอมพิวเตอร์สเปกที่สูงขึ้นได้ถูกรุ่น</label>
+                        <label><input type="radio" name="q25" value="ข"> ข. ช่วยลดการทำงานซ้ำซ้อน
+                            ทำให้เชื่อมโยงข้อมูลได้ถูกต้อง และตอบโจทย์เป้าหมายทางธุรกิจได้อย่างแม่นยำ</label>
+                        <label><input type="radio" name="q25" value="ค"> ค.
+                            ช่วยให้เรามีเวลาพักผ่อนระหว่างรอข้อมูลอัปเดตมากขึ้น</label>
+                        <label><input type="radio" name="q25" value="ง"> ง.
+                            ช่วยให้สีของกราฟในรายงานเข้ากับโลโก้บริษัทได้โดยอัตโนมัติ</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" id="submitBtn">ส่งคำตอบแบบทดสอบ T4</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="success-icon">✓</div>
+            <h2>ส่งข้อมูลสำเร็จ! 🎉</h2>
+            <p class="score-text">คะแนนที่คุณได้คือ <span id="finalScore">0</span> / 25</p>
+            <div class="course-details-popup">
+                <p><strong>ชื่อแบบทดสอบ:</strong> แบบทดสอบ Power BI พื้นฐาน (T4)</p>
+                <p><strong>วันที่:</strong> 10-13 มีนาคม 2569</p>
+                <p><strong>สถานที่:</strong> ณ สถาบันพัฒนาฝีมือแรงงาน 3 ชลบุรี</p>
+            </div>
+            <p class="modal-msg">***ขอขอบคุณที่ตั้งใจเรียนรู้และร่วมสนุกในหลักสูตรนี้ครับ***</p>
+            <button onclick="closeModal()">ตกลง</button>
+        </div>
+    </div>
+
+    <script src="t4-script.js"></script>
+</body>
+
+</html>

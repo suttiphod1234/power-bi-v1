@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power BI | Pre-test</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&family=Outfit:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <span class="badge">Training Workshop 2026</span>
+                <h1>Power BI Pre-test</h1>
+                <p>แบบทดสอบก่อนเรียน: วิเคราะห์ข้อมูลระดับเริ่มต้น</p>
+                <div class="course-info">หลักสูตร: Power BI</div>
+            </div>
+        </header>
+
+        <form id="pretestForm">
+            <!-- ส่วนที่ 1: ข้อมูลส่วนตัว -->
+            <div class="form-section fade-in">
+                <h2><span class="step-num">1</span> ข้อมูลส่วนตัว</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name">ชื่อ-นามสกุล</label>
+                        <input type="text" id="name" name="name" placeholder="ระบุชื่อ-นามสกุล" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">อีเมล</label>
+                        <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">เบอร์โทรศัพท์</label>
+                        <input type="tel" id="phone" name="phone" placeholder="0XXXXXXXXX" pattern="[0-9]{9,10}"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">อายุ</label>
+                        <select id="age" name="age" required>
+                            <option value="" disabled selected>เลือกช่วงอายุ</option>
+                            <option value="18-25">18-25 ปี</option>
+                            <option value="26-35">26-35 ปี</option>
+                            <option value="36-45">36-45 ปี</option>
+                            <option value="46 ปีขึ้นไป">46 ปีขึ้นไป</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="education">ระดับการศึกษา</label>
+                        <select id="education" name="education" required>
+                            <option value="" disabled selected>เลือกวุฒิการศึกษา</option>
+                            <option value="ปวช./ปวส.">ปวช./ปวส.</option>
+                            <option value="ปริญญาตรี">ปริญญาตรี</option>
+                            <option value="สูงกว่าปริญญาตรี">สูงกว่าปริญญาตรี</option>
+                        </select>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="job">ตำแหน่งงานปัจจุบัน</label>
+                        <input type="text" id="job" name="job" placeholder="ระบุตำแหน่งงาน" required>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ส่วนที่ 2: ความคาดหวัง -->
+            <div class="form-section fade-in">
+                <h2><span class="step-num">2</span> หัวข้อที่สนใจ (เลือกสูงสุด 5 ข้อ)</h2>
+                <p class="section-desc">กรุณาเลือกหัวข้อที่คุณต้องการเน้นในการเรียนครั้งนี้</p>
+                <div class="checkbox-grid" id="interestsGrid">
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="interest" value="การเตรียมข้อมูล (Power Query)">
+                        <span class="checkmark"></span>
+                        การเตรียมข้อมูล (Power Query)
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="interest" value="แบบจำลองข้อมูล (Data Modeling)">
+                        <span class="checkmark"></span>
+                        แบบจำลองข้อมูล (Data Modeling)
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="interest" value="สูตรคำนวณ (DAX)">
+                        <span class="checkmark"></span>
+                        สูตรคำนวณ (DAX)
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="interest" value="การวิเคราะห์ข้อมูล (Data Analysis)">
+                        <span class="checkmark"></span>
+                        การวิเคราะห์ข้อมูล (Data Analysis)
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="interest" value="การสร้าง Dashboard และ Visual Reports">
+                        <span class="checkmark"></span>
+                        การสร้าง Dashboard และ Visual Reports
+                    </label>
+                </div>
+            </div>
+
+            <!-- ส่วนที่ 3: แบบทดสอบความรู้เบื้องต้น -->
+            <div class="form-section quiz-section fade-in">
+                <h2><span class="step-num">3</span> แบบทดสอบความเข้าใจเบื้องต้น (ฉบับง่าย)</h2>
+
+                <div class="quiz-item">
+                    <p class="question">1. โปรแกรม Power BI ถูกสร้างขึ้นมาเพื่อเน้นทำงานกับสิ่งใดมากที่สุด?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q1" value="ก" required> ก. ตกแต่งรูปภาพ</label>
+                        <label><input type="radio" name="q1" value="ข"> ข. พิมพ์เอกสารจดหมาย</label>
+                        <label><input type="radio" name="q1" value="ค"> ค. ตัวเลขและข้อมูล</label>
+                        <label><input type="radio" name="q1" value="ง"> ง. ตัดต่อวิดีโอ</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">2. ถ้าคุณมีข้อมูลเยอะมากจนดูไม่รู้เรื่อง Power BI
+                        จะช่วยเปลี่ยนเป็นอะไรให้ดูง่ายขึ้น?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q2" value="ก" required> ก. บทกลอน</label>
+                        <label><input type="radio" name="q2" value="ข"> ข. รูปกราฟและแผนภูมิ</label>
+                        <label><input type="radio" name="q2" value="ค"> ค. ไฟล์เสียงเพลง</label>
+                        <label><input type="radio" name="q2" value="ง"> ง. เกมคอมพิวเตอร์</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">3. "แดชบอร์ด" (Dashboard) ในความเข้าใจของคุณ น่าจะมีลักษณะเป็นอย่างไร?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q3" value="ก" required> ก. หนังสือเล่มหนาๆ
+                            ที่มีแต่ตัวหนังสือ</label>
+                        <label><input type="radio" name="q3" value="ข"> ข.
+                            หน้าจอเดียวที่รวมสรุปข้อมูลสำคัญไว้ทั้งหมด</label>
+                        <label><input type="radio" name="q3" value="ค"> ค. กล่องเก็บเอกสารเก่าๆ</label>
+                        <label><input type="radio" name="q3" value="ง"> ง. ปฏิทินตั้งโต๊ะ</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">4. ข้อดีของการใช้โปรแกรมทำสรุปข้อมูลแทนการวาดด้วยมือคืออะไร?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q4" value="ก" required> ก. ประหยัดไฟมากกว่า</label>
+                        <label><input type="radio" name="q4" value="ข"> ข. โปรแกรมวาดรูปสวยกว่า</label>
+                        <label><input type="radio" name="q4" value="ค"> ค. แก้ข้อมูลปุ๊บ กราฟเปลี่ยนตามทันที</label>
+                        <label><input type="radio" name="q4" value="ง"> ง. ทำให้เราไม่ต้องใช้สายตา</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">5. คุณคิดว่าเราสามารถดูรายงานที่สร้างจาก Power BI ผ่านช่องทางไหนได้บ้าง?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q5" value="ก" required> ก. วิทยุ</label>
+                        <label><input type="radio" name="q5" value="ข"> ข. เครื่องคิดเลข</label>
+                        <label><input type="radio" name="q5" value="ค"> ค. มือถือ หรือ แท็บเล็ต</label>
+                        <label><input type="radio" name="q5" value="ง"> ง. โทรทัศน์รุ่นเก่า</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" id="submitBtn">ส่งข้อมูลแบบทดสอบ</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="success-icon">✓</div>
+            <h2>ส่งข้อมูลสำเร็จ!</h2>
+            <p class="score-text">คะแนนที่คุณได้คือ <span id="finalScore">0</span> / 5</p>
+            <div class="course-details-popup">
+                <p><strong>หลักสูตร:</strong> การวิเคราะห์ข้อมูลด้วยโปรแกรม Power BI<br>(Analyzing Data With Power BI)
+                </p>
+                <p><strong>ดาวน์โหลด คู่มือบรรยาย:</strong> <a
+                        href="https://drive.google.com/file/d/1UNJnP9EQp64OeheFU1kEVNvy25oIxcMf/view?usp=sharing"
+                        target="_blank" rel="noopener noreferrer">คลิ๊กที่นี่ </a>
+                </p>
+                <p><strong>Password : js-powerbi40</strong></p>
+
+            </div>
+            <p class="modal-msg">***ขอความอนุเคราะห์ผู้เข้ารับการฝึกอบรมเข้าร่วมตามวัน – เวลา ที่ระบุในประกาศรับสมัคร***
+            </p>
+            <button onclick="closeModal()">ตกลง</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

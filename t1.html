@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power BI Desktop Foundation | T1 Quiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&family=Outfit:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <span class="badge">Session T1</span>
+                <h1>Power BI Desktop Foundation</h1>
+                <p>แบบทดสอบความรู้พื้นฐาน Power BI Desktop</p>
+                <div class="course-info">หลักสูตร: ชลบุรี (10-13 มีนาคม)</div>
+            </div>
+        </header>
+
+        <form id="t1Form">
+            <!-- ส่วนที่ 1: ข้อมูลส่วนตัว -->
+            <div class="form-section fade-in">
+                <h2><span class="step-num">1</span> ข้อมูลส่วนตัว</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name">ชื่อ-นามสกุล</label>
+                        <input type="text" id="name" name="name" placeholder="ระบุชื่อ-นามสกุล" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">อีเมล</label>
+                        <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">เบอร์โทรศัพท์</label>
+                        <input type="tel" id="phone" name="phone" placeholder="0XXXXXXXXX" pattern="[0-9]{9,10}"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="job">ตำแหน่งงานปัจจุบัน</label>
+                        <input type="text" id="job" name="job" placeholder="ระบุตำแหน่งงาน" required>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ส่วนที่ 2: แบบทดสอบ -->
+            <div class="form-section quiz-section fade-in">
+                <h2><span class="step-num">2</span> แบบทดสอบความรู้พื้นฐาน (10 ข้อ)</h2>
+
+                <div class="quiz-item">
+                    <p class="question">1. จากภาพอินเทอร์เฟซหลัก ส่วนที่ใช้สำหรับเลือกเปลี่ยนระหว่าง Report View, Table
+                        View และ Model View เรียกว่าอะไร?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q1" value="ก" required> ก. แถบเมนูหลัก (Ribbon)</label>
+                        <label><input type="radio" name="q1" value="ข"> ข. แถบมุมมอง (View Bar)</label>
+                        <label><input type="radio" name="q1" value="ค"> ค. หน้าต่างวิชวล (Visualizations Pane)</label>
+                        <label><input type="radio" name="q1" value="ง"> ง. แถบหน้ารายงาน (Page Tab)</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">2. หากต้องการนำเข้าข้อมูลจาก Excel หรือ SQL Server โดยใช้ปุ่มลัดบนหน้าจอ
+                        คุณต้องไปที่ส่วนใด?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q2" value="ก" required> ก. พื้นที่รายงาน (Canvas)</label>
+                        <label><input type="radio" name="q2" value="ข"> ข. หน้าต่างตัวกรอง (Filters Pane)</label>
+                        <label><input type="radio" name="q2" value="ค"> ค. แถบเมนูหลัก (Ribbon)</label>
+                        <label><input type="radio" name="q2" value="ง"> ง. หน้าต่างเขตข้อมูล (Data Pane)</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">3. หน้าต่าง "Visualizations" มีหน้าที่หลักคืออะไร?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q3" value="ก" required> ก. จัดการความสัมพันธ์ของข้อมูล</label>
+                        <label><input type="radio" name="q3" value="ข"> ข.
+                            เลือกรูปแบบกราฟและตั้งค่าการแสดงผลของวิชวล</label>
+                        <label><input type="radio" name="q3" value="ค"> ค. เขียนสูตร DAX</label>
+                        <label><input type="radio" name="q3" value="ง"> ง. บันทึกไฟล์รายงาน</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">4. ในเมนู Options ส่วนของ "GLOBAL" ต่างจาก "CURRENT FILE" อย่างไร?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q4" value="ก" required> ก. Global
+                            ใช้กับไฟล์ปัจจุบันเท่านั้น</label>
+                        <label><input type="radio" name="q4" value="ข"> ข. Global มีผลกับทุกไฟล์ Power BI ในเครื่อง ส่วน
+                            Current File มีผลเฉพาะไฟล์ที่เปิดอยู่</label>
+                        <label><input type="radio" name="q4" value="ค"> ค. Global ใช้สำหรับตั้งค่าสีเท่านั้น</label>
+                        <label><input type="radio" name="q4" value="ง"> ง. ไม่มีความแตกต่างกัน</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">5. "หน้าต่างเขตข้อมูล (Data Pane)" ที่อยู่ขวาสุดของหน้าจอ ใช้สำหรับทำอะไร?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q5" value="ก" required> ก. ตกแต่งกราฟ</label>
+                        <label><input type="radio" name="q5" value="ข"> ข.
+                            แสดงรายชื่อตารางและคอลัมน์ที่มีอยู่ในโมเดลข้อมูล</label>
+                        <label><input type="radio" name="q5" value="ค"> ค. ลบไฟล์ทิ้ง</label>
+                        <label><input type="radio" name="q5" value="ง"> ง. เปลี่ยนภาษาของโปรแกรม</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">6. หากต้องการตั้งค่าเกี่ยวกับ "ภาษาและภูมิภาค" ของไฟล์ปัจจุบัน
+                        คุณควรไปที่เมนูใดใน Options?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q6" value="ก" required> ก. Global > Security</label>
+                        <label><input type="radio" name="q6" value="ข"> ข. Current File > Regional Settings</label>
+                        <label><input type="radio" name="q6" value="ค"> ค. Global > Python scripting</label>
+                        <label><input type="radio" name="q6" value="ง"> ง. Current File > Query reduction</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">7. "หน้าต่างตัวกรอง (Filters Pane)" มีไว้เพื่อวัตถุประสงค์ใด?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q7" value="ก" required> ก.
+                            เพื่อเลือกดูข้อมูลเฉพาะส่วนที่ต้องการในหน้ารายงาน</label>
+                        <label><input type="radio" name="q7" value="ข"> ข. เพื่อเพิ่มหน้าใหม่ในรายงาน</label>
+                        <label><input type="radio" name="q7" value="ค"> ค. เพื่อเปลี่ยนชื่อไฟล์</label>
+                        <label><input type="radio" name="q7" value="ง"> ง. เพื่อเชื่อมต่ออินเทอร์เน็ต</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">8. ในแถบเมนูหลัก (Ribbon) ปุ่ม "Transform Data" ใช้สำหรับเข้าสู่เครื่องมือใด?
+                    </p>
+                    <div class="options">
+                        <label><input type="radio" name="q8" value="ก" required> ก. Power BI Service</label>
+                        <label><input type="radio" name="q8" value="ข"> ข. Power Query Editor</label>
+                        <label><input type="radio" name="q8" value="ค"> ค. DAX Editor</label>
+                        <label><input type="radio" name="q8" value="ง"> ง. Excel Spreadsheet</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">9. ส่วนที่แสดงคำว่า "Page 1" และมีเครื่องหมาย "+" อยู่ด้านล่างซ้าย เรียกว่าอะไร?
+                    </p>
+                    <div class="options">
+                        <label><input type="radio" name="q9" value="ก" required> ก. แถบสถานะ</label>
+                        <label><input type="radio" name="q9" value="ข"> ข. แถบหน้ารายงาน (Page Tab)</label>
+                        <label><input type="radio" name="q9" value="ค"> ค. แถบเมนูหลัก</label>
+                        <label><input type="radio" name="q9" value="ง"> ง. พื้นที่ทำงาน</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">10. หากคุณต้องการลองใช้ฟีเจอร์ใหม่ๆ ที่ยังเป็นเวอร์ชันทดสอบของ Microsoft
+                        คุณต้องไปเปิดที่เมนูใดใน Options?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q10" value="ก" required> ก. Global > Preview features</label>
+                        <label><input type="radio" name="q10" value="ข"> ข. Current File > Privacy</label>
+                        <label><input type="radio" name="q10" value="ค"> ค. Global > Updates</label>
+                        <label><input type="radio" name="q10" value="ง"> ง. Current File > Save and Recover</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" id="submitBtn">ส่งคำตอบแบบทดสอบ T1</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="success-icon">✓</div>
+            <h2>ส่งข้อมูลสำเร็จ!</h2>
+            <p class="score-text">คะแนนที่คุณได้คือ <span id="finalScore">0</span> / 10</p>
+            <div class="course-details-popup">
+                <p><strong>ชื่อแบบทดสอบ:</strong> แบบทดสอบความรู้พื้นฐาน Power BI Desktop (T1)</p>
+                <p><strong>วันที่:</strong> 10-13 มีนาคม 2569</p>
+                <p><strong>สถานที่:</strong> ณ สถาบันพัฒนาฝีมือแรงงาน 3 ชลบุรี</p>
+            </div>
+            <p class="modal-msg">***ขอความอนุเคราะห์ผู้เข้ารับการฝึกอบรมเข้าร่วมตามวัน – เวลา ที่ระบุในประกาศรับสมัคร***
+            </p>
+            <button onclick="closeModal()">ตกลง</button>
+        </div>
+    </div>
+
+    <script src="t1-script.js"></script>
+</body>
+
+</html>

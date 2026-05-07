@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power BI Visuals | T2 Quiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&family=Outfit:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <span class="badge">Session T2</span>
+                <h1>Power BI Visuals</h1>
+                <p>แบบทดสอบความรู้ Power BI Visuals</p>
+                <div class="course-info">หลักสูตร: Power BI</div>
+            </div>
+        </header>
+
+        <form id="t2Form">
+            <!-- ส่วนที่ 1: ข้อมูลส่วนตัว -->
+            <div class="form-section fade-in">
+                <h2><span class="step-num">1</span> ข้อมูลส่วนตัว</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name">ชื่อ-นามสกุล</label>
+                        <input type="text" id="name" name="name" placeholder="ระบุชื่อ-นามสกุล" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">อีเมล</label>
+                        <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">เบอร์โทรศัพท์</label>
+                        <input type="tel" id="phone" name="phone" placeholder="0XXXXXXXXX" pattern="[0-9]{9,10}"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="job">ตำแหน่งงานปัจจุบัน</label>
+                        <input type="text" id="job" name="job" placeholder="ระบุตำแหน่งงาน" required>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ส่วนที่ 2: แบบทดสอบ -->
+            <div class="form-section quiz-section fade-in">
+                <h2><span class="step-num">2</span> แบบทดสอบความรู้ Power BI Visuals (10 ข้อ)</h2>
+
+                <div class="quiz-item">
+                    <p class="question">1. หากคุณต้องการแสดงแนวโน้มยอดขายรายเดือนตลอดทั้งปี 2025
+                        เพื่อดูว่าช่วงใดมียอดขายพุ่งสูงขึ้นหรือลดลง ควรเลือกใช้ Visual ใดเหมาะสมที่สุด?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q1" value="ก" required> ก. Line Chart</label>
+                        <label><input type="radio" name="q1" value="ข"> ข. Pie Chart</label>
+                        <label><input type="radio" name="q1" value="ค"> ค. Gauge Chart</label>
+                        <label><input type="radio" name="q1" value="ง"> ง. Card</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">2. Visual ใดที่เหมาะสำหรับการเจาะลึกข้อมูล (Drill-down)
+                        เพื่อหาสาเหตุที่ส่งผลต่อยอดรวม โดยแสดงเป็นลำดับชั้น (Hierarchy)?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q2" value="ก" required> ก. Funnel Chart</label>
+                        <label><input type="radio" name="q2" value="ข"> ข. Decomposition Tree</label>
+                        <label><input type="radio" name="q2" value="ค"> ค. Stacked Column Chart</label>
+                        <label><input type="radio" name="q2" value="ง"> ง. Map</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">3. เมื่อต้องการแสดง 'ยอดขายรวมทั้งหมด' เป็นตัวเลขขนาดใหญ่ตัวเดียวบน Dashboard
+                        เพื่อให้เด่นชัดที่สุด ควรใช้ Visual ใด?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q3" value="ก" required> ก. Gauge Chart</label>
+                        <label><input type="radio" name="q3" value="ข"> ข. Doughnut Chart</label>
+                        <label><input type="radio" name="q3" value="ค"> ค. Card</label>
+                        <label><input type="radio" name="q3" value="ง"> ง. Area Chart</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">4. หากมีข้อมูลขั้นตอนการสมัครสมาชิก ตั้งแต่ 'คนเข้าชมเว็บ' จนถึง
+                        'ชำระเงินสำเร็จ' ควรใช้แผนภูมิใดเพื่อดูจุดที่คนหายไปมากที่สุด?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q4" value="ก" required> ก. Combo Chart</label>
+                        <label><input type="radio" name="q4" value="ข"> ข. Funnel Chart</label>
+                        <label><input type="radio" name="q4" value="ค"> ค. Line Chart</label>
+                        <label><input type="radio" name="q4" value="ง"> ง. Bar Chart</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">5. ความแตกต่างสำคัญระหว่าง Area Chart และ Line Chart คืออะไร?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q5" value="ก" required> ก. Area Chart
+                            มีการระบายสีพื้นที่ใต้เส้นเพื่อเน้นปริมาณสะสม</label>
+                        <label><input type="radio" name="q5" value="ข"> ข. Area Chart
+                            ใช้ข้อมูลที่เป็นข้อความเท่านั้น</label>
+                        <label><input type="radio" name="q5" value="ค"> ค. Line Chart
+                            ไม่สามารถแสดงข้อมูลตามเวลาได้</label>
+                        <label><input type="radio" name="q5" value="ง"> ง. Area Chart
+                            ไม่สามารถแสดงข้อมูลหลายหมวดหมู่ได้</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">6. ถ้าชื่อหมวดหมู่ข้อมูลของคุณยาวมาก
+                        ควรเลือกใช้แผนภูมิแท่งประเภทใดเพื่อให้ผู้ใช้งานอ่านชื่อได้ง่ายที่สุด?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q6" value="ก" required> ก. Column Chart (แนวตั้ง)</label>
+                        <label><input type="radio" name="q6" value="ข"> ข. Bar Chart (แนวนอน)</label>
+                        <label><input type="radio" name="q6" value="ค"> ค. Pie Chart</label>
+                        <label><input type="radio" name="q6" value="ง"> ง. Doughnut Chart</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">7. Visual ใดที่ใช้ความสามารถของ AI ในการวิเคราะห์หา 'ปัจจัยหลัก' (Influencers)
+                        ที่ส่งผลต่อผลลัพธ์ให้เพิ่มขึ้นหรือลดลง?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q7" value="ก" required> ก. Key Influencers Chart</label>
+                        <label><input type="radio" name="q7" value="ข"> ข. Combo Chart</label>
+                        <label><input type="radio" name="q7" value="ค"> ค. Gauge Chart</label>
+                        <label><input type="radio" name="q7" value="ง"> ง. Map</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">8. ในการสร้าง Dashboard เพื่อติดตามยอดขายปัจจุบันเทียบกับ 'เป้าหมายประจำปี'
+                        (Target) ควรใช้ Visual ใด?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q8" value="ก" required> ก. Doughnut Chart</label>
+                        <label><input type="radio" name="q8" value="ข"> ข. Gauge Chart</label>
+                        <label><input type="radio" name="q8" value="ค"> ค. Line Chart</label>
+                        <label><input type="radio" name="q8" value="ง"> ง. Decomposition Tree</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">9. หากต้องการแสดง 'ยอดขาย (แท่ง)' และ 'กำไร % (เส้น)'
+                        ในกราฟตัวเดียวกันเพื่อประหยัดพื้นที่ ควรใช้ Visual ใด?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q9" value="ก" required> ก. Combo Chart</label>
+                        <label><input type="radio" name="q9" value="ข"> ข. Stacked Column Chart</label>
+                        <label><input type="radio" name="q9" value="ค"> ค. Map</label>
+                        <label><input type="radio" name="q9" value="ง"> ง. Area Chart</label>
+                    </div>
+                </div>
+
+                <div class="quiz-item">
+                    <p class="question">10. เมื่อต้องการแสดงความเข้มข้นของยอดขายสินค้าแบ่งตาม 'รายจังหวัด' ทั่วประเทศไทย
+                        ควรใช้ Visual ใด?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q10" value="ก" required> ก. Decomposition Tree</label>
+                        <label><input type="radio" name="q10" value="ข"> ข. Map</label>
+                        <label><input type="radio" name="q10" value="ค"> ค. Pie Chart</label>
+                        <label><input type="radio" name="q10" value="ง"> ง. Bar Chart</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" id="submitBtn">ส่งคำตอบแบบทดสอบ T2</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="success-icon">✓</div>
+            <h2>ส่งข้อมูลสำเร็จ!</h2>
+            <p class="score-text">คะแนนที่คุณได้คือ <span id="finalScore">0</span> / 10</p>
+            <div class="course-details-popup">
+                <p><strong>ชื่อแบบทดสอบ:</strong> แบบทดสอบความรู้ Power BI Visuals (T2)</p>
+                <p><strong>วันที่:</strong> 10-13 มีนาคม 2569</p>
+                <p><strong>สถานที่:</strong> ณ สถาบันพัฒนาฝีมือแรงงาน 3 ชลบุรี</p>
+            </div>
+            <p class="modal-msg">***ขอความอนุเคราะห์ผู้เข้ารับการฝึกอบรมเข้าร่วมตามวัน – เวลา ที่ระบุในประกาศรับสมัคร***
+            </p>
+            <button onclick="closeModal()">ตกลง</button>
+        </div>
+    </div>
+
+    <script src="t2-script.js"></script>
+</body>
+
+</html>
