@@ -6,7 +6,7 @@
 
 function doPost(e) {
   var sheetName = "Submit_Work";
-  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var ss = SpreadsheetApp.openByUrl("https://docs.google.com/spreadsheets/d/1J0SQmAZxCweHds1My_s9ENBdaHYGVX6YqVGym74pcqU/edit?usp=sharing");
   var sheet = ss.getSheetByName(sheetName);
   
   if (!sheet) {

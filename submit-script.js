@@ -3,7 +3,7 @@
  */
 
 // !สำคัญ: ให้นำ URL ของ Web App จาก Google Apps Script ที่ Deploy แล้วมาวางแทนที่ลิงก์ด้านล่างนี้
-const scriptURL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxcfFRgeX6V-QzWl3EqOy0MReIAOp024YUovDxpY1YI3hFYVFbmuTzqkdqmm_l71GM-EA/exec';
 
 const form = document.getElementById('submitForm');
 const modal = document.getElementById('successModal');
