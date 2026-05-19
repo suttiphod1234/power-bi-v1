@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power BI | ส่งผลงาน</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&family=Outfit:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <span class="badge">Submit Work</span>
+                <h1>Power BI Training</h1>
+                <p>หน้าส่งผลงาน Workshop Power BI</p>
+                <div class="course-info">หลักสูตร: ชลบุรี (10-13 มีนาคม)</div>
+            </div>
+        </header>
+
+        <form id="submitForm">
+            <!-- ส่วนที่ 1: ข้อมูลส่วนตัว -->
+            <div class="form-section fade-in">
+                <h2><span class="step-num">1</span> ข้อมูลส่วนตัว</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name">ชื่อ-นามสกุล</label>
+                        <input type="text" id="name" name="name" placeholder="ระบุชื่อ-นามสกุล" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">อีเมล</label>
+                        <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">เบอร์โทรศัพท์</label>
+                        <input type="tel" id="phone" name="phone" placeholder="0XXXXXXXXX" pattern="[0-9]{9,10}"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="job">ตำแหน่งงานปัจจุบัน</label>
+                        <input type="text" id="job" name="job" placeholder="ระบุตำแหน่งงาน" required>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ส่วนที่ 2: ส่งผลงาน -->
+            <div class="form-section fade-in">
+                <h2><span class="step-num">2</span> ส่งผลงาน</h2>
+                <div class="form-grid" style="display: block;">
+                    <div class="form-group full-width" style="margin-bottom: 20px;">
+                        <label for="workLink">ลิงก์ผลงาน (Power BI Service URL หรือ ลิงก์ Google Drive)</label>
+                        <input type="url" id="workLink" name="workLink" placeholder="https://..." required>
+                        <p style="font-size: 0.9em; color: #666; margin-top: 5px;">*กรุณาตรวจสอบสิทธิ์การเข้าถึงลิงก์ (ตั้งเป็น Public หรือ Anyone with the link) ก่อนทำการส่ง</p>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="comments">ข้อเสนอแนะเพิ่มเติม (ถ้ามี)</label>
+                        <textarea id="comments" name="comments" rows="4" placeholder="พิมพ์ข้อเสนอแนะเพิ่มเติมที่นี่..." style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-family: 'Sarabun', sans-serif; resize: vertical;"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" id="submitBtn">ส่งผลงาน</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="success-icon">✓</div>
+            <h2>ส่งผลงานสำเร็จ! 🎉</h2>
+            <p class="modal-msg">ได้รับผลงานของคุณเรียบร้อยแล้ว</p>
+            <div class="course-details-popup">
+                <p><strong>ประเภท:</strong> ส่งผลงาน Workshop Power BI</p>
+                <p><strong>วันที่:</strong> 10-13 มีนาคม 2569</p>
+                <p><strong>สถานที่:</strong> ณ สถาบันพัฒนาฝีมือแรงงาน 3 ชลบุรี</p>
+            </div>
+            <p class="modal-msg">***ขอขอบคุณที่ตั้งใจเรียนรู้และร่วมทำ Workshop ในหลักสูตรนี้ครับ***</p>
+            <button onclick="closeModal()">ตกลง</button>
+        </div>
+    </div>
+
+    <script src="submit-script.js"></script>
+</body>
+
+</html>
